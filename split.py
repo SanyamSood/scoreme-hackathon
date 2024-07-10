@@ -23,7 +23,7 @@ split_cols['Balance Remaining'] = split_cols['Balance Remaining'].apply(lambda x
 df = pd.concat([df.iloc[:, :2], split_cols, df.iloc[:, 3:]], axis=1)
 
 # Save the updated DataFrame to a new Excel file preserving headers
-output_file_path = 'output.xlsx'
+output_file_path = 'ExtractedTable.xlsx'
 df.to_excel(output_file_path, index=False)
 
 print(f"Updated Excel file saved as '{output_file_path}'.")
